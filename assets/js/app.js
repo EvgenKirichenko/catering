@@ -440,9 +440,9 @@ function parseStyleToObject(str) {
    $('.slider-nav').on('afterChange', function(event, slick, direction){
     $('.slick-center').next().addClass('slide-next-medium-size');
     $('.slick-center').prev().addClass('slide-prev-medium-size');
-    $('.slick-center').toggleClass('slide-next-medium-size');
-    $('.slide-prev-medium-size').prev().removeClass('slide-prev-medium-size');
-    $('.slide-next-medium-size').next().removeClass('slide-next-medium-size');
+    $('.slick-center').removeClass('slide-next-medium-size slide-prev-medium-size');
+    $('.slide-prev-medium-size').prev().removeClass('slide-prev-medium-size slide-next-medium-size');
+    $('.slide-next-medium-size').next().removeClass('slide-prev-medium-size slide-next-medium-size');
   });
   //--------------------popup forms -------------------------//
   $(document).ready(function() {
