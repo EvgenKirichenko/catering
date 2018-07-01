@@ -421,9 +421,26 @@ function parseStyleToObject(str) {
       centerMode: true,
       focusOnSelect: true,
       infinite: true,
-      centerPadding: 0
-
-    });
+      centerPadding: 0,
+      speed: 200,
+      responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+         slidesToShow: 3
+       }
+     },
+     {
+      breakpoint: 640,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        autoplay: true,
+  autoplaySpeed: 5000,
+      }
+    }
+    ]
+  });
     $('.slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -464,6 +481,9 @@ function parseStyleToObject(str) {
     }
   });
   });
+//------------------------Lazy load gallery---------------------------//
+
+
 // ---------------------- Effects for input Forms ------------------------//
 (function() {
         // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
